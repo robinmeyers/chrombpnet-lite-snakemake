@@ -1,0 +1,31 @@
+{
+    "alpha": 10,
+    "batch_size": 64,
+    "beta": 0.5,
+    "bias_model":"bias_model.torch",
+    "controls": null,
+    "count_output_bias": true,
+    "in_window": 2114,
+    "loci": "filtered.peaks.bed",
+    "lr": 0.001,
+    "max_counts": 99999999,
+    "max_epochs": 20,
+    "max_jitter": 128,
+    "min_counts": 0,
+    "n_filters": 64,
+    "n_layers": 8,
+    "name": "name",
+    "negatives": "filtered.nonpeaks.bed",
+    "out_window": 1000,
+    "profile_output_bias": true,
+    "random_state": 0,
+    "reverse_complement": true,
+    "sequences": "genome.fa",
+    "signals": [
+        "data_unstranded.bw"
+    ],
+    "training_chroms": [],
+    "validation_chroms": [],
+    "validation_iter": 100,
+    "verbose": true
+}

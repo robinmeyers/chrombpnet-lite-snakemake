@@ -1,0 +1,18 @@
+{
+   "batch_size": 8,
+   "in_window": 2114,
+   "out_window": 1000,
+   "verbose": true,
+   "chroms": [],
+   "model":"name.accessibility.final.torch",
+
+   "sequences":"genome.fa",
+   "loci":"peaks.bed",
+
+   "output": "profile",
+   "ohe_filename": "name.profile.ohe.npz",
+   "attr_filename": "name.profile.attr.npz",
+   "n_shuffles":20,
+   "random_state":0
+}
+

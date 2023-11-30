@@ -1,0 +1,14 @@
+{
+   "batch_size":64,
+   "in_window":2114,
+   "out_window":1000,
+   "verbose":true,
+   "chroms":[],
+   "model":"accessibility.final.torch",
+
+   "sequences":"genome.fa",
+   "loci":"filtered.peaks.bed",
+
+   "profile_filename": "name.profile.npz",
+   "counts_filename": "name.counts.npz"
+}
