@@ -41,7 +41,7 @@ rule make_bias_fit_json:
 
 rule fit_bias_model:
 	input: "outs/{sample}/fold{fold}/bias.fit.json"
-	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.final.torch"
+	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.torch"
 	shell: "bpnet fit -p {input}"
 
 rule make_fit_json:
@@ -54,8 +54,8 @@ rule make_fit_json:
 rule fit_accessibility_model:
 	input:
 		json = "outs/{sample}/fold{fold}/fit.json",
-		bias_model = "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.final.torch"
-	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.final.torch"
+		bias_model = "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.torch"
+	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.torch"
 	shell: "chrombpnet fit -p {input.json}"
 
 
@@ -69,7 +69,7 @@ rule make_predict_json:
 rule predict_model:
 	input:
 		json = "outs/{sample}/fold{fold}/predict.json",
-		model = "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.final.torch"
+		model = "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.torch"
 	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.profile.npz"
 	shell: "chrombpnet predict -p {input.json}"
 
@@ -83,7 +83,7 @@ rule make_interpret_json:
 rule interpret_model:
 	input:
 		json = "outs/{sample}/fold{fold}/interpret.json",
-		pred = "outs/{sample}/fold{fold}/{sample}.fold{fold}.profile.npz"
+		model = "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.torch"
 	output: "outs/{sample}/fold{fold}/{sample}.fold{fold}.profile.attr.npz"
 	shell: "chrombpnet interpret -p {input.json}"
 

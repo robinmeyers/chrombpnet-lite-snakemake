@@ -4,7 +4,7 @@
    "out_window": 1000,
    "verbose": true,
    "chroms": [],
-   "model":"name.accessibility.final.torch",
+   "model":"name.accessibility.torch",
 
    "sequences":"genome.fa",
    "loci":"peaks.bed",

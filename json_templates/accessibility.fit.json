@@ -2,7 +2,7 @@
     "alpha": 10,
     "batch_size": 64,
     "beta": 0.5,
-    "bias_model":"bias_model.torch",
+    "bias_model":"bias.torch",
     "controls": null,
     "count_output_bias": true,
     "in_window": 2114,

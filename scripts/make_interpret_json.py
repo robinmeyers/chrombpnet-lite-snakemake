@@ -11,7 +11,7 @@ parameters['attr_filename'] = "outs/{sample}/fold{fold}/{sample}.fold{fold}.prof
 parameters['loci'] = snakemake.config['peaks']
 parameters['sequences'] = snakemake.config['genome_fa']
 parameters['chroms'] = split['test']
-parameters['model'] = "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.final.torch".format(sample = snakemake.wildcards.sample, fold = snakemake.wildcards.fold)
+parameters['model'] = "outs/{sample}/fold{fold}/{sample}.fold{fold}.accessibility.torch".format(sample = snakemake.wildcards.sample, fold = snakemake.wildcards.fold)
 
 with open(snakemake.output[0], 'w') as outfile:
 	outfile.write(json.dumps(parameters, sort_keys=True, 

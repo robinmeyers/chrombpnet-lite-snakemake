@@ -13,7 +13,7 @@ parameters['negatives'] = snakemake.config['nonpeaks']
 parameters['sequences'] = snakemake.config['genome_fa']
 parameters['training_chroms'] = split['train']
 parameters['validation_chroms'] = split['valid']
-parameters['bias_model'] = "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.final.torch".format(sample = snakemake.wildcards.sample, fold = snakemake.wildcards.fold)
+parameters['bias_model'] = "outs/{sample}/fold{fold}/{sample}.fold{fold}.bias.torch".format(sample = snakemake.wildcards.sample, fold = snakemake.wildcards.fold)
 
 with open(snakemake.output[0], 'w') as outfile:
 	outfile.write(json.dumps(parameters, sort_keys=True, 
