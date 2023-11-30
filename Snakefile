@@ -13,6 +13,8 @@ config['nonpeaks'] = "data/filtered.nonpeaks.bed"
 rule all:
 	input:
 		expand("outs/{sample}/fold{fold}/{sample}.fold{fold}.profile.attr.npz",
+			sample = config['sample_bigwigs'].keys(), fold = range(0, 5)),
+		expand("outs/{sample}/fold{fold}/{sample}.fold{fold}.profile.npz",
 			sample = config['sample_bigwigs'].keys(), fold = range(0, 5))
 	run:
 		print("workflow complete!")
