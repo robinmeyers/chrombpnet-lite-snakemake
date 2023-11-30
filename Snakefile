@@ -78,7 +78,7 @@ rule make_interpret_json:
 		template = "json_templates/interpret.json",
 		split = "splits/fold_{fold}.json"
 	output: "outs/{sample}/fold{fold}/interpret.json"
-	script: "scripts/make_predict_json.py"
+	script: "scripts/make_interpret_json.py"
 
 rule interpret_model:
 	input:
