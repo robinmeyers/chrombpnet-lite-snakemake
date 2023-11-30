@@ -3,8 +3,8 @@ config = {}
 
 config['genome_fa'] = "reference/hg38.fa"
 
-config['sample_bigwigs'] = {"D3_DMSO" : ["data/D3_DMSO_208.unstranded.bw", "data/D3_DMSO_209.unstranded.bw"],
-				 "D3_dBrd9" : ["data/D3_dBrd9_208.unstranded.bw", "data/D3_dBrd9_209.unstranded.bw"]}
+config['sample_bigwigs'] = {"D3_DMSO" : ["data/D3_DMSO.unstranded.bw"],
+					       "D3_dBrd9" : ["data/D3_dBrd9.unstranded.bw"]}
 
 config['peaks'] = "data/filtered.peaks.bed"
 config['nonpeaks'] = "data/filtered.nonpeaks.bed"
